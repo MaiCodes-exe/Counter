@@ -1,30 +1,41 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import PropTypes from "prop-types";
+//import Counter from "./counter.jsx";
 //create your first component
-function SimpleCounter(props) {
-	return ();
-};
-SimpleCounter.propTypes = {
-	digitSix: PropTypes.number,
-	digitFive: PropTypes.number,
-	digitFour: PropTypes.number,
-	digitThree: PropTypes.number,
-	digitTwo: PropTypes.number,
-	digitOne: PropTypes.number,
-};
-let counter = 0;
-setInterval(function () {
-	const six = Math.floor(counter / 100000);
-	const five = Math.floor(counter / 10000);
-	const four = Math.floor(counter / 1000);
-	const three = Math.floor(counter / 100);
-	const two = Math.floor(counter / 10);
-	const one = Math.floor(counter / 1);
-	console.log(six, five, four, three, two, one);
+const Home = (props) => {
+	var i = 0;
 
-	counter++;
-}, 1000);
+	setInterval(function () {
+		var six = Math.floor(i / 100000);
+		var five = Math.floor(i / 10000);
+		var four = Math.floor(i / 1000);
+		var three = Math.floor(i / 100);
+		var two = Math.floor(i / 10);
+		var one = Math.floor(i / 1);
+		i++;
+		console.log("hi");
+		console.log(two);
+	}, 1000);
+
+	return (
+		<>
+			<h1>
+				MY COUNTER {six}
+				{five}
+				{four}
+				{three}
+				{two}
+				{one}
+			</h1>
+			{/* <Counter
+				digitSix={six}
+				digitFive={five}
+				digitFour={four}
+				digitThree={three}
+				digitTwo={two}
+				digitOne={one}
+			/> */}
+		</>
+	);
+};
 
 export default Home;
