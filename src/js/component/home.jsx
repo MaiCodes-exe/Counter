@@ -26,14 +26,7 @@ const Home = (props) => {
 				{two}
 				{one}
 			</h1>
-			{/* <Counter
-				digitSix={six}
-				digitFive={five}
-				digitFour={four}
-				digitThree={three}
-				digitTwo={two}
-				digitOne={one}
-			/> */}
+			
 		</>
 	);
 };
